@@ -1,0 +1,41 @@
+{
+  "AP": {
+    "metric": "l1",
+    "median": "-157.31557",
+    "minimum": "-11455.341",
+    "damping": "0.85",
+    "preference": "-1361.7045355902774",
+    "random_state": 0,
+    "max_iter": 500,
+    "convergence_iter": 25,
+    "affinity": "precomputed",
+    "exemplars": "78"
+  },
+  "TSNE_3D": {
+    "n_components": 3,
+    "early_exaggeration": 18,
+    "perplexity": "150",
+    "random_state": 0,
+    "learning_rate": "800",
+    "metric": "chebyshev",
+    "init": "pca"
+  },
+  "SVM": {
+    "random_state": 0,
+    "kernel": "rbf",
+    "decision_function_shape": "ovr",
+    "class_weight": "balanced",
+    "C": "3027.3744612219293",
+    "gamma": "0.029721600364876734",
+    "score": "0.9913043478260869"
+  },
+  "SVM_3D": {
+    "random_state": 0,
+    "kernel": "rbf",
+    "decision_function_shape": "ovr",
+    "class_weight": "balanced",
+    "C": "7143689.872041667",
+    "gamma": "0.32974198268491134",
+    "score": "0.989905047476262"
+  }
+}

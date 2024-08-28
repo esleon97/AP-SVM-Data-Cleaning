@@ -1,0 +1,68 @@
+{
+  "outputs": [
+    "svm_label", "energy"
+   ],
+  
+   "processors":{
+
+    "bl_mean , bl_std, bl_slope, bl_intercept":{
+       "function": "linear_slope_fit",
+       "module": "dspeed.processors",
+       "args" : ["waveform[0: round(44.5*us/waveform.period)]", 
+                 "bl_mean","bl_std", "bl_slope","bl_intercept"],
+       "unit": ["ADC","ADC","ADC","ADC"]
+    },
+       
+    "wf_blsub":{
+      "function": "bl_subtract",
+      "module": "dspeed.processors",
+      "args": ["waveform", "bl_mean", "wf_blsub"],
+      "unit": "ADC"
+    },
+       
+    "wf_tp_min, wf_tp_max, wf_min, wf_max":{
+      "function": "min_max",
+      "module": "dspeed.processors",
+      "args": ["wf_blsub", "wf_tp_min", "wf_tp_max", "wf_min", "wf_max"],
+      "unit": ["ns","ns","ADC", "ADC"]
+    },
+       
+    "wf_norm": {
+        "function": "min_max_norm",
+        "module": "dspeed.processors",
+        "args": ["wf_blsub", "wf_min", "wf_max", "wf_norm"],
+        "unit": ["ADC"]
+    },
+       
+   "dwt_haar":{
+        "function": "discrete_wavelet_transform",
+        "module": "dspeed.processors",
+        "args": ["wf_blsub", 5, "'h'", "'a'", "dwt_haar(256, 'f')"],
+        "unit": "ADC",
+        "prereqs": ["wf_blsub"]
+    },
+    
+    "dwt_tp_min, dwt_tp_max, dwt_min, dwt_max":{
+      "function": "min_max",
+      "module": "dspeed.processors",
+      "args": ["dwt_haar", "dwt_tp_min", "dwt_tp_max", "dwt_min", "dwt_max"],
+      "unit": ["ns","ns","ADC", "ADC"]
+    },
+
+    "dwt_norm": {
+        "function": "min_max_norm",
+        "module": "dspeed.processors",
+        "args": ["dwt_haar", "dwt_min", "dwt_max", "dwt_norm"],
+        "unit": ["ADC"]
+    },
+       
+    "svm_label": {
+      "function": "svm_predict",
+      "module": "dspeed.processors",
+      "args": ["dwt_norm", "svm_label"],
+      "unit": "ADC",
+      "prereqs": ["dwt_norm"],
+      "init_args": ["'./svm_detector.sav'"]
+    }
+  }
+}
