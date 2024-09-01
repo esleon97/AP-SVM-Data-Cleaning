@@ -1,3 +1,5 @@
+[![DOI](https://sandbox.zenodo.org/badge/848598691.svg)](https://sandbox.zenodo.org/doi/10.5072/zenodo.105284)
+
 # AP-SVM Data Cleaning
 
 The Affinity Propagation (AP) + Support Vector Machine (SVM) Data Cleaning model is designed to remove anomalous and keep physical signals captured by Germanium detectors through a clustering + classification mechanism.
