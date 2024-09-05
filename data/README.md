@@ -6,7 +6,7 @@ This directory contains training and testing data, configuration JSON files, and
 
 ### 1. Accessing Raw Data
 
-Open the [Dataverse](https://dataverse.unc.edu/dataverse/apsvmdatacleaning) where the raw data files are stored. Copy all of the `*_raw.h5` HDF5 files from the **Training Data for AP-SVM** and **Testing Data for AP-SVM** into this directory. 
+Open the [Zenodo repository](https://zenodo.org/records/13693791) where the raw data files are stored. Copy all of the `*_raw.h5` HDF5 files from the **Training Data for AP-SVM** and **Testing Data for AP-SVM** into this directory. 
 
 ### 2. Processing Raw Files
 
