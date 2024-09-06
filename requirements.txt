@@ -98,9 +98,7 @@ jupyterlab_server==2.27.2
 jupyterlab_widgets==3.0.11
 kiwisolver==1.4.5
 legend_daq2lh5==1.2.2
-legend-plot-style==0.0.1
 legend_pydataobj==1.7.0
-legendstyles==0.1.dev46+gb3f3b25
 libarchive-c==2.9
 libmambapy==1.5.8
 llvmlite==0.43.0
