@@ -10,7 +10,7 @@ Open the [Zenodo repository](https://zenodo.org/records/13693791) where the raw 
 
 ### 2. Processing Raw Files
 
-Open the `BuildDSPTrain.ipynb` and `BuildDSPTest.ipynb` notebooks to process the waveforms in the raw files. The output training files will contain normalized waveforms and approximate coefficients the discrete wavelet transform and energies of every waveform. The output testing files will contain a data cleanin label assigned by the trained SVM and an energy value for every waveform. 
+Open the `BuildDSPTrain.ipynb` and `BuildDSPTest.ipynb` notebooks to process the waveforms in the raw files. The output training files will contain normalized waveforms and approximate coefficients the discrete wavelet transform and energies of every waveform. The output testing files will contain a data cleaning label assigned by the trained SVM and an energy value for every waveform. 
 
 ## File Descriptions
 
