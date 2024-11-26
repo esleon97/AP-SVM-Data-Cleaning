@@ -43,4 +43,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact and Support
 
-For any questions, issues, or feedback please contact [Esteban León](esleon97@unc.edu).
+For any questions, issues, or feedback please contact [Esteban León](mailto:esleon97@unc.edu).
